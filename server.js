@@ -10,7 +10,7 @@ const cors = require('cors')
 // import { MongoClient } from 'mongodb'
 dotenv.config()
 // Connection URL
-const url = 'process.env.MONGO';
+const url = process.env.MONGO;
 const client = new MongoClient(url);
 const app = express()
 
