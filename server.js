@@ -14,7 +14,7 @@ const url = process.env.MONGO;
 const client = new MongoClient(url);
 const app = express()
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000 ;
 const dbName = 'passop';
 app.use(bodyparser.json())
 app.use(cors())
