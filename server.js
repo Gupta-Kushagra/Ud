@@ -11,7 +11,12 @@ const cors = require('cors')
 dotenv.config()
 // Connection URL
 const url = process.env.MONGO;
-const client = new MongoClient(url);
+const client = new MongoClient(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tls: true
+});
+
 const app = express()
 
 const port = process.env.PORT || 3000 ;
