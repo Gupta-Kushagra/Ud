@@ -10,11 +10,11 @@ const cors = require('cors')
 // import { MongoClient } from 'mongodb'
 dotenv.config()
 // Connection URL
-const url = 'mongodb+srv://kushagragupta9793:xG9IaCz9zOTNpHsC@cluster1.jat4f.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1';
+const url = 'process.env.MONGO';
 const client = new MongoClient(url);
 const app = express()
 
-const port = 3000
+const port = process.env.PORT
 const dbName = 'passop';
 app.use(bodyparser.json())
 app.use(cors())
